@@ -31,7 +31,7 @@ class Demo1ApplicationTests {
             return 111;
         });
         final Integer integer = integerCompletableFuture.get();
-        System.out.println();
+        System.out.println("devTest");
     }
 
 }
