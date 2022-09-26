@@ -32,6 +32,10 @@ class Demo1ApplicationTests {
         });
         final Integer integer = integerCompletableFuture.get();
         System.out.println("devTest");
+        System.out.println("devTest");
+        System.out.println("devTest");
+        System.out.println("devTest");
+        System.out.println("devTest");
     }
 
 }
