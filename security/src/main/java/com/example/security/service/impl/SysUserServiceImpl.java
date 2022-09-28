@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * @author makejava
  * @since 2022-09-27 18:10:23
  */
-@Service("sysUserService")
+@Service()
 public class SysUserServiceImpl extends ServiceImpl<SysUserDao, SysUser> implements SysUserService {
 
 }

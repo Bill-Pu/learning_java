@@ -32,3 +32,27 @@ spring:
       min-idle: 0
     # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
       max-wait: -1
+
+#mybatis配置
+mybatis:
+  typeAliasesPackage: com.example.security.entity
+  mapperLocations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+mybatis-plus:
+  mapper-locations:
+    - classpath:/mapper/*.xml
+  typeAliasesPackage: com.example.security.entity
+  global-config:
+    db-config:
+      id-type: auto
+      db-type: mysql
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+logging:
+  level:
+    root: info
+    com.example.security.mapper: DEBUG
+    com.baomidou.mybatisplus: DEBUG
