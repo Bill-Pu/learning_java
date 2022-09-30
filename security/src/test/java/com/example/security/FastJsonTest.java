@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Test;
 
+import java.lang.ref.Reference;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -35,5 +36,11 @@ public class FastJsonTest {
         //可以看到返回值还是List<String>
         List<String> peekResultList = stringList2.stream().peek(s -> Integer.valueOf(s)).collect(Collectors.toList());
         System.out.println(peekResultList);
+        Object o = JSON.toJSON(stringList1);
+        System.out.println("------------");
+        System.out.println(String.valueOf(o));
+        List<String> strings = JSON.parseArray(o.toString(), String.class);
+        System.out.println(strings);
+
     }
 }

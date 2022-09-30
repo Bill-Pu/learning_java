@@ -21,7 +21,7 @@ import java.io.Serializable;
 @Data
 @TableName("sys_user")
 @ApiModel(value="SysUser",description="用户表实体类")
-public class SysUser extends Model<SysUser> implements Serializable {
+public class User extends Model<User> implements Serializable {
 
                         
     @TableId(type=IdType.AUTO)

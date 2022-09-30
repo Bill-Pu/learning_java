@@ -1,7 +1,7 @@
 package com.example.security.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.example.security.entity.SysUser;
+import com.example.security.entity.User;
 import com.example.security.service.SysUserService;
 import com.example.security.utils.RedisCache;
 import io.swagger.annotations.ApiOperation;
@@ -29,11 +29,11 @@ public class ControllerTest {
     SysUserService sysUserService;
         @GetMapping("/test")
         @ApiOperation(value = "一个测试API", notes = "第一个测试api")
-        public List<SysUser> test(){
+        public List<User> test(){
 //            String test = (String) redisCache.getCacheObject("test");
             String test1 = String.valueOf(redisTemplate.opsForValue().get("test"));
             String s = JSON.parseObject(test1, String.class);
-            List<SysUser> list = sysUserService.list();
+            List<User> list = sysUserService.list();
             return list;
         }
 }

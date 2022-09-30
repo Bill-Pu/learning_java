@@ -1,7 +1,7 @@
 package com.example.security.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.example.security.entity.SysUser;
+import com.example.security.entity.User;
 
 /**
  * 用户表(SysUser)表服务接口
@@ -9,7 +9,7 @@ import com.example.security.entity.SysUser;
  * @author makejava
  * @since 2022-09-27 18:10:23
  */
-public interface SysUserService extends IService<SysUser> {
+public interface SysUserService extends IService<User> {
 
 }
 
