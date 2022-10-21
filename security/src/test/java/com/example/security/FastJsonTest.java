@@ -44,5 +44,6 @@ public class FastJsonTest {
         List<String> strings = JSON.parseArray(o.toString(), String.class);
         System.out.println(strings);
         System.out.println("release修改");
+
     }
 }

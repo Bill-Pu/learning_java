@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.Collectors;
 
 /**
  * @author ：Puyb
@@ -34,6 +37,10 @@ public class ControllerTest {
             String test1 = String.valueOf(redisTemplate.opsForValue().get("test"));
             String s = JSON.parseObject(test1, String.class);
             List<User> list = sysUserService.list();
+            list.stream().distinct().collect(Collectors.toList());
+            HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+            ReentrantLock reentrantLock = new ReentrantLock();
+            HashMap<Object, Object> objectObjectHashMap1 = new HashMap<>();
             return list;
         }
 }
