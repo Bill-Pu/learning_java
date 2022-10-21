@@ -5,8 +5,10 @@ import com.google.common.collect.Lists;
 import org.junit.jupiter.api.Test;
 
 import java.lang.ref.Reference;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -41,6 +43,6 @@ public class FastJsonTest {
         System.out.println(String.valueOf(o));
         List<String> strings = JSON.parseArray(o.toString(), String.class);
         System.out.println(strings);
-
+        System.out.println("release修改");
     }
 }
